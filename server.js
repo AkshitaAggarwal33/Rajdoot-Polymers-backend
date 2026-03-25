@@ -8,7 +8,10 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://rajdoot-polymers-frontend-wheat.vercel.app",
+  credentials: true
+}))
 app.use(express.json());
 
 // MongoDB connection
