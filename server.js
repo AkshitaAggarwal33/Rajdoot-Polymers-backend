@@ -10,6 +10,7 @@ const app = express();
 // middleware
 app.use(cors({
   origin: "https://rajdoot-polymers-frontend.vercel.app/",
+  methods: ["GET", "POST"],
   credentials: true
 }))
 app.use(express.json());
